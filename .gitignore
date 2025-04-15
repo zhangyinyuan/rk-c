@@ -88,4 +88,4 @@ dkms.conf
 
 cmake-build-debug
 *.iml
-*.idea
+.idea
