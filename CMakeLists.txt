@@ -13,6 +13,8 @@ add_library(untitled STATIC
 
 add_executable(N-DG N-DG.c)
 add_executable(JB JB.c)
-add_executable(DP DP.c)
+add_executable(DP DP.c
+        ShellSort.c)
 add_executable(QuickSort QuickSort.c)
 add_executable(HeapSort HeapSort.c)
+add_executable(ShellSort ShellSort.c)

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 void merge(int arr[], int begin, int mid, int end) {
-    // 变量抽离出来,后续可能复用,并且看代码也清楚明了
     int left_len = mid - begin + 1;
     int right_len = end - mid;
     int left[left_len], right[right_len];
@@ -49,7 +48,7 @@ void mergeSort(int arr[], int begin, int end) {
 }
 
 int main() {
-    int arr[] = {90, 1, 100, 5, 20};
+    int arr[] = {90, 1, 10, 5, 20};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     mergeSort(arr, 0, n - 1);
