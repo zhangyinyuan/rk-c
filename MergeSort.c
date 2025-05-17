@@ -44,10 +44,10 @@ void merge(int arr[], int begin, int mid, int end) {
  */
 void mergeSort(int arr[], int begin, int end) {
     if (begin < end) {
-        int mid = begin + (end - begin) / 2; // 分解
-        mergeSort(arr, begin, mid); //对左半部分进行归并排序  求解
-        mergeSort(arr, mid + 1, end); //对右半部分进行归并排序  求解
-        merge(arr, begin, mid, end); //进行合并  合并
+        int mid = (begin + end) / 2; // 分解
+        mergeSort(arr, begin, mid); // 对左半部分进行归并排序  求解
+        mergeSort(arr, mid + 1, end); // 对右半部分进行归并排序  求解
+        merge(arr, begin, mid, end); // 进行合并  合并
     }
 }
 
@@ -55,7 +55,7 @@ void mergeSort(int arr[], int begin, int end) {
  * 王道 - 归并排序 https://www.youtube.com/watch?v=0oQV8_MgpVA
  * 归并排序使用递归
  *
- * 1. 若low < high, 则将序列从中间位置拆分成两个子序列mid = (high-low)/2
+ * 1. 若low < high, 则将序列从中间位置拆分成两个子序列mid = (low+heigh)/2
  * 2. 对左半部分进行归并排序 [low,mind]
  * 3. 对有半部分进行归并排序 [mind,high]
  * 4. 对左右两个子序列Merge成为1个
