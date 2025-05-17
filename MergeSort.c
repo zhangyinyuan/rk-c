@@ -38,17 +38,30 @@ void merge(int arr[], int begin, int mid, int end) {
     }
 }
 
+/**
+ * 对一个序列进行归并排序
+ * 归并排序分为3步: 1.分解,2.求解,3.合并
+ */
 void mergeSort(int arr[], int begin, int end) {
     if (begin < end) {
-        int mid = begin + (end - begin) / 2; // Avoid potential overflow
-        mergeSort(arr, begin, mid);
-        mergeSort(arr, mid + 1, end);
-        merge(arr, begin, mid, end);
+        int mid = begin + (end - begin) / 2; // 分解
+        mergeSort(arr, begin, mid); //对左半部分进行归并排序  求解
+        mergeSort(arr, mid + 1, end); //对右半部分进行归并排序  求解
+        merge(arr, begin, mid, end); //进行合并  合并
     }
 }
 
 /**
  * 王道 - 归并排序 https://www.youtube.com/watch?v=0oQV8_MgpVA
+ * 归并排序使用递归
+ *
+ * 1. 若low < high, 则将序列从中间位置拆分成两个子序列mid = (high-low)/2
+ * 2. 对左半部分进行归并排序 [low,mind]
+ * 3. 对有半部分进行归并排序 [mind,high]
+ * 4. 对左右两个子序列Merge成为1个
+ *
+ * 时间复杂度 最好 = 最坏 = 平均 = O(nlog2^n)
+ * 空间复杂度O(n) , 主要来自于辅助数组
  */
 int main() {
     int arr[] = {90, 1, 10, 5, 20};
