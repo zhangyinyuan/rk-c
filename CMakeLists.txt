@@ -6,7 +6,6 @@ set(CMAKE_C_STANDARD 11)
 add_library(untitled STATIC
         N-DG.c
         MergeSort.c
-        NQueue.c
         JB.c
         DP.c
         QuickSort.c
