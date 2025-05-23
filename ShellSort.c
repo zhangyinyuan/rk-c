@@ -27,6 +27,11 @@ void shellSort(int data[], int n) {
                 data[j + dk] = t;
             }
         }
+        printf("第%d趟后序列为: ", (i + 1));
+        for (int l = 0; l < n; ++l) {
+            printf("%d ", data[l]);
+        }
+        printf("\n");
         ++i;
     }
 }
