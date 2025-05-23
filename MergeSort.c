@@ -64,7 +64,10 @@ void mergeSort(int arr[], int begin, int end) {
  * 空间复杂度O(n) , 主要来自于辅助数组
  */
 int main() {
-    int arr[] = {90, 1, 10, 5, 20};
+    int arr[] = {15, 9, 7, 8, 20, -1, 4};
+    // 9, 7, 8,15,-1,4,20
+    //9,15,7,8,-1,20,4 mergeSort
+
     int n = sizeof(arr) / sizeof(arr[0]);
 
     mergeSort(arr, 0, n - 1);
