@@ -50,10 +50,6 @@ void queue(int j) {
 }
 
 int main() {
-    for (int j = 1; j <= N; ++j) {
-        q[j] = 0;
-    }
-
     // 一开始将第一个皇后放入到第一行的第一列
     queue(1);
     return 0;
